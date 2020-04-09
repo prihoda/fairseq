@@ -836,7 +836,7 @@ def create_dummy_data(data_dir, num_examples=100, maxlen=20, alignment=False):
         _create_dummy_alignment_data('test.in', 'test.out', 'test.align')
 
 
-def create_dummy_roberta_head_data(data_dir, num_examples=100, maxlen=10, num_classes=2, regression=False):
+def create_dummy_roberta_head_data(data_dir, num_examples=50, maxlen=10, num_classes=2, sequence_tagging=False, regression=False):
     input_dir = 'input' if sequence_tagging else 'input0'
     def _create_dummy_data(filename):
         random_data = torch.rand(num_examples * maxlen)
